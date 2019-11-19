@@ -4,7 +4,7 @@
   "description": "minify css class names",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "lint": "eslint ./src/ --ext .ts",
     "lintfix": "eslint ./src/ --ext .ts --fix"
@@ -17,16 +17,20 @@
   "author": "arvind0598",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.9",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
-  },
-  "dependencies": {
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.4",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
   },
+  "dependencies": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
