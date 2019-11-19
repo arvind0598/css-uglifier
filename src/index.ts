@@ -1,3 +1,3 @@
-const Greeter = (name: string) => `Hello ${name}!`;
+export const Greeter = (name: string): string => `Hello ${name}!`;
 
-export default Greeter;
+export const AnotherGreeter = (name: string): string => `Bye ${name}!`;
