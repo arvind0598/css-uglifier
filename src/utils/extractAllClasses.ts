@@ -4,7 +4,8 @@ const extractAllClasses = (arr: Array<Element>): Record<string, number> => {
 
   classArray.forEach((classes) => {
     classes.forEach((c) => {
-      classesCount[c] = classesCount.hasOwnProperty(c) ? classesCount[c] + 1 : 1;
+      classesCount[c] = Object.prototype.hasOwnProperty.call(classesCount, c)
+        ? classesCount[c] + 1 : 1;
     });
   });
 
