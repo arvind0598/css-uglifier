@@ -5,4 +5,5 @@ module.exports = {
   },
   testRegex: '(/test/.*|(\\.|/)(test|spec))\\.ts?$',
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+  modulePathIgnorePatterns: ['/constants/.*'],
 };
