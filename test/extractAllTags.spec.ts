@@ -10,8 +10,8 @@ describe('reading the basic html', () => {
     expect(result).toBeInstanceOf(Array);
   });
 
-  test('there are 12 elements in the file', () => {
-    expect(result.length).toBe(12);
+  test('there are 7 elements in the file', () => {
+    expect(result.length).toBe(7);
   });
 
   test('check if all elements are of type HTMLElement', () => {
