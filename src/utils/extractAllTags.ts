@@ -1,4 +1,5 @@
-const extractAllTags = (document: Document): Array<Element> => {
+const extractAllTags = (document: Document | Error): Array<Element> => {
+  if (document instanceof Error) return [];
   const allElements = document.querySelectorAll('html, body, body *');
   return Array.from(allElements);
 };
