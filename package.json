@@ -7,8 +7,8 @@
     "test": "jest",
     "cover": "jest --coverage",
     "build": "tsc",
-    "lint": "eslint ./src/ --ext .ts",
-    "lintfix": "eslint ./src/ --ext .ts --fix"
+    "lint": "eslint ./src/ ./test/ --ext .ts",
+    "lintfix": "eslint ./src/ ./test/ --ext .ts --fix"
   },
   "keywords": [
     "css",

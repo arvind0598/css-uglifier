@@ -29,7 +29,8 @@
                 "args": "after-used",
                 "ignoreRestSiblings": false
             }
-        ]
+        ],
+        "brace-style": ["error", "stroustrup"]
     },
     "settings": {
         "import/resolver": {
