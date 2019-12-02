@@ -23,8 +23,12 @@ describe('reading incomplete error html', () => {
   const document = readHTMLFile('incomplete-error');
   const result = extractAllTags(document);
 
-  test('something', () => {
+  test('extracted tags are returned as an array', () => {
     expect(result).toBeInstanceOf(Array);
+  });
+
+  test('there are 4 elements in the file', () => {
+    expect(result.length).toBe(4);
   });
 });
 
