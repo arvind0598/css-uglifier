@@ -10,9 +10,9 @@ const n = ALLOWED_LETTERS.length;
  * this is the same algorithm used to convert a base-10 number to a base-n number
  * the only difference is that the output is not reversed as it doesn't matter here
  *
- * @param index {number} the initial number
+ * @param {number} index the initial number
  *
- * @returns name {string} of the mapped number
+ * @returns {string} name of the mapped number
  */
 export const generateClassName = (index: number): string => {
   let name = '';
@@ -29,8 +29,8 @@ export const generateClassName = (index: number): string => {
 /**
  * @summary returns a mappings between old and new classname
  *
- * @param name {string} unuglified classname
- * @param index {number} the index at which the classname existed
+ * @param {string} name unuglified classname
+ * @param {number} index the index at which the classname existed
  */
 export const generateClassMap = (name: string, index: number): ClassMap => ({
   before: name,
