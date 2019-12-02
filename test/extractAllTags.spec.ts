@@ -18,3 +18,20 @@ describe('reading the basic html', () => {
     result.forEach((element) => expect(element).toBeInstanceOf(HTMLElement));
   });
 });
+
+describe('reading incomplete error html', () => {
+  const document = readHTMLFile('incomplete-error');
+  const result = extractAllTags(document);
+
+  test('something', () => {
+    expect(result).toBeInstanceOf(Array);
+  });
+});
+
+describe('reading file that does not exist', () => {
+  const filename = 'does-not-exist';
+
+  test('should throw an error', () => {
+    expect(() => readHTMLFile(filename)).toThrowError(/ENOENT/);
+  });
+});
