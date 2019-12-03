@@ -17,22 +17,10 @@
       "count": 1
     }
   ],
-  "UGLY_CLASS_LIST": [
-    {
-      "before": "innermost",
-      "after": "a"
-    },
-    {
-      "before": "inner1",
-      "after": "b"
-    },
-    {
-      "before": "inner2",
-      "after": "c"
-    },
-    {
-      "before": "outer",
-      "after": "d"
-    }
-  ]
+  "UGLY_CLASS_LIST": {
+    "innermost": "a",
+    "inner1": "b",
+    "inner2": "c",
+    "outer": "d"
+  }
 }

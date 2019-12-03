@@ -1,0 +1,26 @@
+{
+    "PRETTY_CLASS_LIST": [
+      {
+        "className": "innermost",
+        "count": 3
+      },
+      {
+        "className": "inner2",
+        "count": 3
+      },
+      {
+        "className": "outer",
+        "count": 3
+      },
+      {
+        "className": "inner1",
+        "count": 1
+      }
+    ],
+    "UGLY_CLASS_LIST": {
+      "innermost": "a",
+      "inner2": "b",
+      "outer": "c",
+      "inner1": "d"
+    }
+  }
