@@ -1,4 +1,4 @@
-import { ClassCount, ClassMap } from '../types';
+import { ClassCount } from '../types';
 import { ALLOWED_LETTERS } from '../constants';
 
 const n = ALLOWED_LETTERS.length;
@@ -27,25 +27,19 @@ export const generateClassName = (index: number): string => {
 };
 
 /**
- * @summary returns a mappings between old and new classname
- *
- * @param {string} name unuglified classname
- * @param {number} index the index at which the classname existed
- */
-export const generateClassMap = (name: string, index: number): ClassMap => ({
-  before: name,
-  after: generateClassName(index),
-});
-
-/**
  * @summary generates new class names and maps them to existing ones
  *
  * @param arr the output of @see extractAllTags
  *
  * @returns {Array<ClassCount>} a list of mappings
  */
-export const remapClasses = (arr: Array<ClassCount>): Array<ClassMap> => (
-  arr.map(({ className }, index) => generateClassMap(className, index))
-);
+export const remapClasses = (arr: Array<ClassCount>): Record<string, string> => {
+  const obj: Record<string, string> = {};
+  arr.forEach(({ className }, i) => {
+    const newClass = generateClassName(i);
+    obj[className] = newClass;
+  });
+  return obj;
+};
 
 export default remapClasses;
